@@ -1,0 +1,8 @@
+/Volumes/Macintosh HD/Repository/OrderService/bin/Debug/netcoreapp1.1/OrderService.deps.json
+/Volumes/Macintosh HD/Repository/OrderService/bin/Debug/netcoreapp1.1/OrderService.runtimeconfig.json
+/Volumes/Macintosh HD/Repository/OrderService/bin/Debug/netcoreapp1.1/OrderService.runtimeconfig.dev.json
+/Volumes/Macintosh HD/Repository/OrderService/bin/Debug/netcoreapp1.1/OrderService.dll
+/Volumes/Macintosh HD/Repository/OrderService/bin/Debug/netcoreapp1.1/OrderService.pdb
+/Volumes/Macintosh HD/Repository/OrderService/obj/Debug/netcoreapp1.1/OrderService.AssemblyInfo.cs
+/Volumes/Macintosh HD/Repository/OrderService/obj/Debug/netcoreapp1.1/OrderService.dll
+/Volumes/Macintosh HD/Repository/OrderService/obj/Debug/netcoreapp1.1/OrderService.pdb

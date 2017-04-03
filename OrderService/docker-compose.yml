@@ -1,0 +1,33 @@
+version: '3'
+
+services: 
+    postgres:
+        image: 'postgres'
+        environment: 
+            POSTGRES_PASSWORD : 'rattan'
+            POSTGRES_USER : 'pawanpg'
+            POSTGRES_DB : 'Orders'
+        ports: 
+            - 5433:5433
+        networks: 
+            - pawankawatra-network
+    web:
+      container_name: orderservice-1
+      image: 'pawankawatra/orderservice'
+      depends_on:
+            - postgres
+      links: 
+            - postgres
+      build:
+        context: .
+        dockerfile: .docker/web.development.dockerfile
+      ports: 
+        - '5002:5002' 
+      networks:
+        - pawankawatra-network
+
+networks: 
+    pawankawatra-network:
+      driver: bridge 
+      
+       
