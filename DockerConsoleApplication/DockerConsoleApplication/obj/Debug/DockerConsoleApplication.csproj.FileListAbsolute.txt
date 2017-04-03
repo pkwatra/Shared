@@ -1,0 +1,6 @@
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\bin\Debug\DockerConsoleApplication.exe.config
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\bin\Debug\DockerConsoleApplication.exe
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\bin\Debug\DockerConsoleApplication.pdb
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\obj\Debug\DockerConsoleApplication.csprojResolveAssemblyReference.cache
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\obj\Debug\DockerConsoleApplication.exe
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\obj\Debug\DockerConsoleApplication.pdb

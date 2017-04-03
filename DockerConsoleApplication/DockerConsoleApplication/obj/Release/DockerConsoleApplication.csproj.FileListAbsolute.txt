@@ -1,0 +1,5 @@
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\bin\Release\DockerConsoleApplication.exe.config
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\bin\Release\DockerConsoleApplication.exe
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\bin\Release\DockerConsoleApplication.pdb
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\obj\Release\DockerConsoleApplication.exe
+D:\Repository\Shared\DockerConsoleApplication\DockerConsoleApplication\obj\Release\DockerConsoleApplication.pdb
