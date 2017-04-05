@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Product License Manager</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="stylesheet" href="angular-datepicker.min.css">
+	<link rel="stylesheet/less" type="text/css" href="layout.less">
+	<script src="lib.min.js"></script>
+	<script src="less.min.js"></script>
+	<script src="app.min.js"></script>
+	<script src="three.min.js"></script>
+</head>
+<body ng-app="glvrApp">
+	<header class="header">
+		<div class="row header-inner" ng-controller="loginController">
+			<a class="navbar-brand" href="#"><img alt="" src="logo.png"> </a>
+			<div style="width:90%" ng-if="isUserLoggedIn"><button ng-click="logoutUser()" confirm-click="'Are you sure you want to logout?'" class="btn btn-default pull-right">LOGOUT</button> </div>
+		</div>
+	</header>
+	<div class="body-container">
+		<div class="container">
+			<div class="row content-container">
+				<div ui-view></div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="row footer-inner">
+				<div class="container">
+					<p class="copy" style="text-align: center;">
+						©<script>document.write(new Date().getFullYear())</script> Product Systems Inc. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</body>
+</html>
