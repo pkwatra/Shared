@@ -1,16 +1,17 @@
-var URL = 'http://o00o.me/photos/kyiv.jpg';
+var URL = 'GLR.jpg';
 
 THREE.ImageUtils.crossOrigin = '';
 var camera, scene, renderer;
 
-var isUserInteracting = false,
+var isUserInteracting = false, isOptionClick = false,
     onMouseDownMouseX = 0, onMouseDownMouseY = 0,
     onPointerDownPointerX = 0, onPointerDownPointerY = 0,
     onPointerDownLon = 0, onPointerDownLat = 0,
     lon = 0, onMouseDownLon = 0,
     lat = 0, onMouseDownLat = 0,
     phi = 0, theta = 0;
-
+var updateFcts	= [];
+var video;
 
 function init() {
 
@@ -32,13 +33,58 @@ function init() {
 
   mesh = new THREE.Mesh( geometry, material );
 
-  scene.add( mesh );
+  scene.add( mesh );  
+
+  var geo_img = new THREE.BoxGeometry(4, 3, 1);    
+  var mat_img = new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture("pawan.jpg")});
+  var img = new THREE.Mesh(geo_img, mat_img);   
+  img.name ="pawan";
+  img.position.z = -10;
+  img.position.y = 5;
+  scene.add(img); 
+
+
+  var videofile = 'sintel.mp4';
+  
+  var video = document.createElement( 'video' );
+  video.width = 640;
+  video.height = 360;
+  video.loop = true;
+  video.muted = true;
+  video.src = videofile;
+  video.setAttribute( 'webkit-playsinline', 'webkit-playsinline' );
+  video.play();
+
+  var geo_video = new THREE.BoxGeometry(6, 5, 1);    
+  var video_texture = new THREE.VideoTexture( video );
+  //video_texture.minFilter = THREE.LinearFilter;
+  //video_texture.format = THREE.RGBFormat;
+  var video_material   = new THREE.MeshBasicMaterial( { map : video_texture } );
+  var video_mesh = new THREE.Mesh( geo_video, video_material );
+  video_mesh.position.z = -20;
+  video_mesh.position.y = 5;
+
+  video_mesh.rotateY(THREE.Math.degToRad(130));
+  
+  //video_mesh.rotation.x = Math.PI * 0.1;
+  //video_mesh.rotation.y = Math.PI * 0.3;
+  scene.add( video_mesh ); 
 
   renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( window.innerWidth, window.innerHeight );
   container.appendChild( renderer.domElement );
 
+  var domEvents	= new THREEx.DomEvents(camera, renderer.domElement)
+  domEvents.addEventListener(img, 'click', function(event){
+      console.log('you clicked on mesh', img);     
+      isOptionClick = !isOptionClick;   
+      console.log(isOptionClick);
+      
+  }, false); 
+ 
+  
+ 
   document.addEventListener( 'mousedown', onDocumentMouseDown, false );
   document.addEventListener( 'mousemove', onDocumentMouseMove, false );
   document.addEventListener( 'mouseup', onDocumentMouseUp, false );
@@ -97,6 +143,15 @@ function onWindowResize() {
   renderer.setSize( window.innerWidth, window.innerHeight );
 
 }
+
+
+function onVideoPlayButtonClick(){
+		video.play()
+}
+
+	function onVideoPauseButtonClick(){
+		video.pause()
+	}
 
 function onDocumentMouseDown( event ) {
 
@@ -162,9 +217,14 @@ function animate() {
 
 }
 
+
+
+
+
+
 function update() {
 
-  if ( isUserInteracting === false ) {
+  if ( isUserInteracting === false  && isOptionClick == false ) {
 
     lon += 0.1;
 
