@@ -1,0 +1,16 @@
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\DockerRegistration.Messaging.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\DockerRegistration.Messaging.pdb
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\GreenPipes.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\MassTransit.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\MassTransit.RabbitMqTransport.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\NewId.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\Newtonsoft.Json.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\RabbitMQ.Client.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\GreenPipes.xml
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\MassTransit.xml
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\MassTransit.RabbitMqTransport.xml
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\Newtonsoft.Json.xml
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\bin\Debug\RabbitMQ.Client.xml
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\obj\Debug\DockerRegistration.Messaging.dll
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\obj\Debug\DockerRegistration.Messaging.pdb
+D:\Repository\Shared\DockerRegistration\DockerRegistration.Messaging\obj\Debug\DockerRegistration.Messaging.csprojResolveAssemblyReference.cache

@@ -47,6 +47,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/dist'));
 app.use(express.static(__dirname + '/images'));
+app.use(express.static(__dirname + '/video'));
 app.use('/views', express.static(__dirname + '/views'));
 app.use('/partials', express.static(__dirname + '/partials'));
 app.use('/fonts', express.static(__dirname + '/fonts'));

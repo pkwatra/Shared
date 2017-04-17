@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				files: {
 					'dist/lib.min.js': ['lib/angular.min.js', 'lib/jquery-2.1.4.min.js', 'lib/angular-ui-router.js', 'lib/bootstrap.min.js', 'lib/angular-datepicker.js', 'lib/angular-uuid2.min.js', 'lib/underscore.min.js'],
 					'dist/less.min.js' :['lib/less.min.js'],
-					'dist/three.min.js' :['lib/three.min.js','js/GLWebVRCore.js'],
+					'dist/three.min.js' :['lib/three.min.js','lib/threex.domevents.js','js/GLWebVRCore.js'],
 					'dist/app.min.js': ['js/glvrweb-module.js','js/schema-service.js','js/home-controller.js','js/landing-controller.js','js/firstfloor-controller.js','js/login-controller.js','js/confirmClick.js','js/serverError.js']
 				}
 			}
