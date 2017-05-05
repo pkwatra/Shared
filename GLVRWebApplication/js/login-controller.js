@@ -9,6 +9,8 @@ angular.module('glvrApp').controller('loginController', ['$rootScope', '$scope',
 			}
 		})
 	}
+
+
 }]);
 
 

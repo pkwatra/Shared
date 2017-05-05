@@ -8,12 +8,23 @@ angular.module('glvrApp').controller('landingController', ['$rootScope', '$scope
 		{
 			$location.path('/home');
 		}
+
+		BindDragEvents();
+		CreateMesh(true);
+		StopRotation(true);
 	})
 
-	SchemaService.showLandingImage(function (re){
-		console.log("Showing landing page!");
-	})
+	$rootScope.showMenu = function() {
+		 $(".main-menu-link").hide();
+	     $('.main-nav').animate({"right": '0'});
+	}
 
+
+	$scope.hideMenu = function() {
+		$('.main-nav').animate({"right": '-400px'}, function() {
+			$(".main-menu-link").show();
+		});
+	}
 }]);
 
 

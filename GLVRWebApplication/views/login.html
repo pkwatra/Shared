@@ -1,48 +1,22 @@
 
-<div role="tabpanel" class="tab-pane  col-sm-12">
-	<div server-error ng-show="adminError"></div>
-	<div class="top-padding-100">
-		<div style="height:110px">
-			<div style="width: 100%; height: 40px	; border-bottom: 1px solid black; text-align: center">
-				<span style="font-size: 50px; background-color: #FFFFFF; padding: 0 10px;">LOG IN</span>
-			</div>
-		</div>
-		<form name="userForm" class="form-horizontal UserInput col-md-12" ng-submit="loginUser(userForm)" novalidate>
-			<div class="form-group selectCustomer login">
-				<div class="row" style="padding:10px">
-					<div class="col-md-12">
-						<label for="userID" class="col-sm-4 control-label">User id:</label>
-						<div class="col-sm-6">
-							<input type="text" name="username" ng-model="username" ng-required="true" type="string" class="form-control" />
-							<span ng-if="submitted &amp;&amp; userForm.username.$error.required" class="error-block">*Username is required.</span>
-						</div>
-					</div>
-				</div>
-				<div class="row" style="padding:10px">
-					<div class="col-md-12">
-						<label for="password" class="col-sm-4 control-label">Password:</label>
-						<div class="col-sm-6">
-							<input type="password" name="password" ng-model="password" ng-required="true" class="form-control" />
-							<span ng-if="submitted &amp;&amp; userForm.password.$error.required &amp;&amp; submitted" class="error-block">*Password is required.</span>
-						</div>
-					</div>
-				</div>
-				<div class="row" style="padding:10px">
-					<div class="col-md-12">
-						<div class="col-sm-6">
-							<span ng-if="submitted &amp;&amp; inValidUser" class="error-block">
-								*Invalid Username/Password
-							</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 btn-row text-right">
-					<button type="submit" class="btn btn-info btn-lg">
-						<i class="fa fa-file-o"></i>Submit
-					</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
 
+
+<section class="main-sec">
+	<h1>Welcome to Globallogic</h1>
+	<h2>Experiences like you're actually here.</h2>
+	<a href="" ng-click="showLoginScreen()" class="login-btn">Login</a>
+</section>
+<div class="login-panel">
+	<a href="" ng-click="hideLoginScreen()" class="close-icon"><img src="ic_close.png"/></a>	
+	<form id="userForm" name="userForm" ng-submit="loginUser(userForm)">
+		<input type="text" name="username" ng-model="username" ng-required="true" type="string" placeholder="Enter your email" />
+		<span ng-if="submitted &amp;&amp; userForm.username.$error.required" class="error-block">*Username is required.</span>
+		<input type="password" name="password" ng-model="password" ng-required="true" placeholder="Enter password" />	
+		<span ng-if="submitted &amp;&amp; userForm.password.$error.required &amp;&amp; submitted" class="error-block">*Password is required.</span>
+		<div class="col-md-12 btn-row text-right">
+			<button type="submit" class="login-form-btn">
+				<i class="fa fa-file-o"></i>Login
+			</button>
+		</div>
+	</form>
+</div>

@@ -14,8 +14,13 @@ angular.module('schemaService', [])
 
 	return {
 		showLandingImage : function(callback) {
-			init();
-			animate();
+			//init();
+			//animate();
+		},
+		showHomeImage : function(callback) {
+			console.log("Home controller called!!");
+		    initHome();
+			animateHome();
 		},
 		getData: function (callback) {
 			callback(params)
