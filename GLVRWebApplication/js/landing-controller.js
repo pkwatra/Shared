@@ -9,8 +9,8 @@ angular.module('glvrApp').controller('landingController', ['$rootScope', '$scope
 			$location.path('/home');
 		}
 
-		BindDragEvents();
-		CreateMesh(true);
+		ChangeMeshToStep1();
+		BindDragEvents();		
 		StopRotation(true);
 	})
 
@@ -24,6 +24,28 @@ angular.module('glvrApp').controller('landingController', ['$rootScope', '$scope
 		$('.main-nav').animate({"right": '-400px'}, function() {
 			$(".main-menu-link").show();
 		});
+	}
+
+	function HideMenuControl() {
+		$('.main-nav').animate({"right": '-400px'}, function() {
+			$(".main-menu-link").show();
+		});	
+	}
+
+	$scope.goToStep2 = function() {
+		HideMenuControl();
+		ChangeMeshToStep2();
+		BindDragEvents();
+		StopRotation(true);	
+		CreateMesh(true);		
+	}
+
+	$scope.goToStep1 = function() {
+	    HideMenuControl();		
+		ChangeMeshToStep1();
+		BindDragEvents();		
+		StopRotation(true);
+		RemoveAllMesh();
 	}
 }]);
 
